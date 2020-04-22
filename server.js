@@ -20,9 +20,9 @@ app.listen(port, function () {
 });
 
 
-app.get('/', function (request, response) {
-    response.send('Hello, World!');
-})
+app.get('/', (req, res) => {
+    res.send('Hello!');
+});
 
 
 //get a list of users
