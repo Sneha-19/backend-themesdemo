@@ -3,7 +3,9 @@ var express = require('express');
 var app = express();
 
 //Server port
-var port = 5000;
+// var port = 5000;
+const PORT = process.env.PORT || 5000;
+
 
 var db = require("./database.js")
 var md5 = require("md5")
@@ -15,8 +17,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Start server
-app.listen(port, function () {
-    console.log('App started on port ' + port);
+// app.listen(port, function () {
+//     console.log('App started on port ' + port);
+// });
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 
