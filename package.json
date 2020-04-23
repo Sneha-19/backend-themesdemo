@@ -5,8 +5,6 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run build",
-    "start": "node server.js",
     "heroku-postbuild": "npm build",
     "start:heroku": "npm start:prod",
     "start:production": "npm build && npm start:prod",
