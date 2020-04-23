@@ -27,9 +27,11 @@ app.get('/', (req, res) => {
 
 //get a list of users
 app.get("/users", (req, res, next) => {
+    console.log("Inside get api users")
     var sql = "select * from userData"
     var params = []
     db.all(sql, params, (err, rows) => {
+        console.log("Accesing users data db")
         if (err) {
             res.status(400).json({ "error": err.message });
             return;
