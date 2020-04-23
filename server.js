@@ -6,7 +6,6 @@ var app = express();
 // var port = 5000;
 const PORT = process.env.PORT || 5000;
 
-
 var db = require("./database.js")
 var md5 = require("md5")
 
