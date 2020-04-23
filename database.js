@@ -9,7 +9,7 @@ var md5 = require('md5');
 // PRAGMA foreign_keys = ON;
 
 //Definition of the SQLite database file (DBSOURCE)
-const DBSOURCE = "db.sqlite"
+const DBSOURCE = "db.sqlite1"
 
 let db = new sqlite3.Database(DBSOURCE, (err) => {
     if (err) {
@@ -27,6 +27,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             CONSTRAINT email_unique UNIQUE (email)
             )`,
         (err) => {
+            console.log('Inside the SQLite database.')
             if (err) {
                 // Table already created
             }else{
