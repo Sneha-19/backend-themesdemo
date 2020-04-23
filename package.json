@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build",
     "start": "node server.js",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm build",
     "start:heroku": "npm start:prod",
-    "start:production": "npm run build && npm start:prod",
+    "start:production": "npm build && npm start:prod",
     "start:prod": "better-npm-run start:prod",
     "build": "better-npm-run build"
   },
