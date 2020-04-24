@@ -9,7 +9,7 @@ var md5 = require('md5');
 // PRAGMA foreign_keys = ON;
 
 //Definition of the SQLite database file (DBSOURCE)
-const DBSOURCE = "db.sqlite2"
+const DBSOURCE = "db.sqlite"
 
 let db = new sqlite3.Database(DBSOURCE, (err) => {
     if (err) {
@@ -84,7 +84,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
                 db.run(insert, [('2020-01-19 12:00:00'),"200",'1','2'])
                 db.run(insert, [('2020-02-19 12:00:00'),"300",'1','3'])
                 db.run(insert, [('2020-02-19 12:00:00'),"400",'2','2'])
-                db.run(insert, [('2020-02-19 12:00:00'),"500",'2','5'])
+                db.run(insert, [('2020-02-19 12:00:00'),"500",'2','2'])
             }
         });
     }
