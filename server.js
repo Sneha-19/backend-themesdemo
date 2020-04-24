@@ -1,6 +1,7 @@
 //Create express app
 var express = require('express');
 var app = express();
+var cors = require('cors')
 
 //Server port
 // var port = 5000;
@@ -11,16 +12,20 @@ var md5 = require("md5")
 
 var bodyParser = require('body-parser');
 
+//Enabling CORS
+app.use(cors())
+
 //mounts BodyParser as middleware - every request passes through it
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 
 // Start server
 // app.listen(port, function () {
 //     console.log('App started on port ' + port);
 // });
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+    console.log(`Our app is running on port ${PORT}`);
 });
 
 
