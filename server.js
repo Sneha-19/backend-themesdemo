@@ -189,7 +189,7 @@ app.get("/getMonthwiseEarnings/:userId", (req, res, next) => {
 
 //GET API to get revenue type
 app.get('/getRevenueData/:userId', (req, res, next) => {
-    var sql = "SELECT revenueType, SUM(earningAmount) AS earningSum FROM revenueData CROSS JOIN earnings ON earnings.revenueId = revenueData.revenueId WHERE userId = ? GROUP BY revenueType"
+    var sql = "SELECT revenueType AS name, SUM(earningAmount) AS earningSum FROM revenueData CROSS JOIN earnings ON earnings.revenueId = revenueData.revenueId WHERE userId = ? GROUP BY name"
     var params = [req.params.userId]
     db.all(sql, params, (err, rows) => {
         if (err) {
